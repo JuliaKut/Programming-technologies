@@ -30,4 +30,10 @@ git merge new
 
 8) Була створена папка Lab_1 та закинуто у неї README.md
 
-9) Внесення змін через піктограму редагування.
+9) Внесення змін через піктограму редагування. На локальній версії зміни відсутні , оскільки ми їх 
+зробили лише на сервері GitHub. Для того ,щоб зміни відображалися локально, нам необхідно оновити 
+локальний репозиторій за допомогою команди:                       
+git pull
+
+10) The last of us 2 - Abby: 
+    ![alt text](https://fsa.zobj.net/crop.php?r=3GiUE9SQA96w3R8oTKkfy0-wwYVvYzweshMwagAknPmIHIgO-nl-ibqjp_vzlQjcDmuayXeb450IArOh4h2683DCpBS7oV-UTdE3WQ3J9oorSqKe1we-aoqsfVXF_l-sOffogJFgBIzuleSj)
