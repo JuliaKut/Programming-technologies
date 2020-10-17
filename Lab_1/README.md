@@ -36,4 +36,4 @@ git merge new
 git pull
 
 10) The last of us 2 - Abby: 
-    ![alt text](https://fsa.zobj.net/crop.php?r=3GiUE9SQA96w3R8oTKkfy0-wwYVvYzweshMwagAknPmIHIgO-nl-ibqjp_vzlQjcDmuayXeb450IArOh4h2683DCpBS7oV-UTdE3WQ3J9oorSqKe1we-aoqsfVXF_l-sOffogJFgBIzuleSj)
+    ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_1/Abby.jpeg)
