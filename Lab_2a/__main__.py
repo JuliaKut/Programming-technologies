@@ -25,10 +25,25 @@ def how_to_write_logs():
     logger.error("Це повідомлення про помилку")
 
 
+def func2():
+    keys= {"a":1,"b":2,"c":3,"d":4}
+    try:
+        value =keys['e']
+    except KeyError:
+        logger.error("даного ключа не існує")
+    else:
+        logger.info("ось ваш ключ")
+    finally:
+        print("результат")
+
 if __name__ == '__main__':
     args = parser.parse_args()
     if args.logs:
         how_to_write_logs()
     else:
         main(args.opt)
-
+    print("Вивід моєї функції\n")
+    common.func(False)
+    print("\n------------------------------------------------------")
+    print("Вивід моєї другої функції\n")
+    func2()
