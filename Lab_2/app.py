@@ -39,9 +39,28 @@ def main(url=''):
     return True
 
 
-def home_work():
-    # Ваш захист
-    pass
+def home_work(h=''):
+    if not h:
+        print("\n----------------------------------------------\n")
+        time = datetime.now().time()
+        hours = time.hour
+        print("Точний час: ",time,"\n")
+        if 6 <= hours <= 20 :
+            hello="Доброго дня!"
+            print(hello)
+        else:
+            hello="Доброї ночі!"
+            print(hello)
+        return hello
+    else:
+        print("\n----------------------------------------------\n")
+        if  6 <= h <= 20 :
+            hello="Доброго дня!"
+            print(hello)
+        else:
+            hello="Доброї ночі!"
+            print(hello)
+        return hello
 
 
 if __name__ == "__main__":
@@ -50,3 +69,5 @@ if __name__ == "__main__":
     main()
     print(a + "\nРезультат з правильною URL: ")
     main('http://date.jsontest.com/')
+
+    a=home_work()
