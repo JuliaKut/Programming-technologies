@@ -7,5 +7,6 @@ def main(request):
     return render(request, 'main.html', {'parameter': "test", 'parameter2': "test2" , 'parameter3': "test3"})
 
 def health(request):
-    response = {'date': 'test1', 'current_page': "test2", 'server_info': "test3", 'client_info': "test4"}
+    now = datetime.now()
+    response = {'date': now.strftime("%d/%m/%Y %H:%M:%S"), 'current_page': request.build_absolute_uri(), 'server_info': os.uname(), 'client_info': request.headers['User-Agent']}
     return JsonResponse(response)
