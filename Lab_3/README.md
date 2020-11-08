@@ -28,5 +28,21 @@
  файлами темплейту додатка:
 
         pipenv run python manage.py startapp main
-
+6) Створила потрібні папки та файли.
+7) Вказала Django frameworks його назву додатку (main) 
+та де шукати веб сторінки. 
+8) Cтворила сторінки двох типів - перша буде зчитуватись 
+з .html темплейта. друга сторінка буде просто повертати
+ відповідь у форматі JSON; 
+9)  
+    Результат 1 сторінка:
+ 
+        You are at main page. Hello world
+        
+        test test2 test3 
+    Результат 2 сторінка:
+    
+        {"date": "test1", "current_page": "test2", "server_info": "test3", "client_info": "test4"}  
+10) Все працює , коміт виконано.        
+        
 
