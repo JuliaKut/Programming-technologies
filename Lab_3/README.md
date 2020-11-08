@@ -24,3 +24,9 @@
         Quit the server with CONTROL-C.
 
 4) Створений коміт з базовим темплейтом сайту.
+5) Cтворила темплейт додатку та коміт із новоствореними
+ файлами темплейту додатка:
+
+        pipenv run python manage.py startapp main
+
+
