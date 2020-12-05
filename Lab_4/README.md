@@ -26,3 +26,17 @@
           sudo docker build -t juliakut/progrtech:django .
           sudo docker images
           sudo docker push juliakut/progrtech:django
+7) Запустила сайт (все працює)
+    
+          sudo docker run -it --rm -p 8000:8000 juliakut/progrtech:django 
+8) Cтворила Dockerfile.monit. Виконала білд (build) Docker імеджа 
+ з моніторингом та завантажила його до репозиторію.    
+[Імедж](https://hub.docker.com/layers/juliakut/progrtech/monitoring/images/sha256-d84a56e8c4f76588f6206c0012fa8ac758ed4686a0b937f1beeda6b589f62ec9?context=explore)
+
+          sudo docker build -t juliakut/progrtech:monitoring --file Dockerfile.monit .
+          sudo docker images
+          sudo docker push juliakut/progrtech:monitoring
+    Запустила обидва імеджі.
+    
+          sudo docker run -it --rm -p 8000:8000 juliakut/progrtech:django
+          sudo docker run --net=host --rm -it serjuliakut/progrtech:monitoring         
