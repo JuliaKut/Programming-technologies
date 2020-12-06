@@ -39,4 +39,28 @@
     Запустила обидва імеджі.
     
           sudo docker run -it --rm -p 8000:8000 juliakut/progrtech:django
-          sudo docker run --net=host --rm -it serjuliakut/progrtech:monitoring         
+          sudo docker run --net=host --rm -it serjuliakut/progrtech:monitoring
+9) Для того щоб отримати логи я використала  docker exec
+
+          sudo docker ps
+    Знайшла необхідний ID (d1ad98df8ba4)
+    
+          sudo docker exec -it d1ad98df8ba4 /bin/bash   
+          cat server.log
+    Частина з виведедених даних
+    
+          root@julia-VirtualBox:/app# cat server.log
+          INFO 2020-11-08 19:05:44,031 root : Сервер доступний. Час на сервері: 08/11/2020 17:05:44
+          INFO 2020-11-08 19:05:44,032 root : Запитувана сторінка: : http://localhost:8000/health/
+          INFO 2020-11-08 19:05:44,032 root : Відповідь сервера місти наступні поля:
+          INFO 2020-11-08 19:05:44,032 root : Ключ: date, Значення: 08/11/2020 17:05:44
+          INFO 2020-11-08 19:05:44,032 root : Ключ: current_page, Значення: http://localhost:8000/health/
+          INFO 2020-11-08 19:05:44,032 root : Ключ: server_info, Значення: ['Linux', 'julia-VirtualBox', '5.4.0-52-generic', '#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020', 'x86_64']
+          INFO 2020-11-08 19:05:44,033 root : Ключ: client_info, Значення: python-requests/2.22.0
+          INFO 2020-11-08 19:21:03,824 root : Сервер доступний. Час на сервері: 08/11/2020 17:21:03
+          INFO 2020-11-08 19:21:03,827 root : Запитувана сторінка: : http://localhost:8000/health/
+          INFO 2020-11-08 19:21:03,827 root : Відповідь сервера місти наступні поля:
+          INFO 2020-11-08 19:21:03,827 root : Ключ: date, Значення: 08/11/2020 17:21:03
+          INFO 2020-11-08 19:21:03,827 root : Ключ: current_page, Значення: http://localhost:8000/health/
+          INFO 2020-11-08 19:21:03,828 root : Ключ: server_info, Значення: ['Linux', 'julia-VirtualBox', '5.4.0-52-generic', '#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020', 'x86_64']
+               
