@@ -39,7 +39,7 @@
     Запустила обидва імеджі.
     
           sudo docker run -it --rm -p 8000:8000 juliakut/progrtech:django
-          sudo docker run --net=host --rm -it serjuliakut/progrtech:monitoring
+          sudo docker run --net=host --rm -it juliakut/progrtech:monitoring
 9) Для того щоб отримати логи я використала  docker exec
 
           sudo docker ps
