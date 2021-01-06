@@ -69,5 +69,36 @@
 
         delete:
         	@sudo docker image rm --force $(shell docker images -q)
-        	        	
-       	        
+    Перевірила docker images:
+    
+            (Lab_5-QfkFtov1) julia@julia-VirtualBox:~/IdeaProjects/Programming-technologies/Lab_5$ sudo docker images
+            REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+	
+13) Створила docker-compose.yml у кориневій папці проекту. у даному варіанті є дві мережі - публічна та секретна.
+Публічна мережа використовується  для загального доступу , а секретна для бекенду та баз даних , до яких 
+доступ мають мати не усі користувачі.       	        	
+14) Запустила докер компос:  
+
+        sudo docker-compose -p lab5 up  
+15) Перевірила чи сайт працює. Для цього зайшла на адресу 127.0.0.1:80  
+16) Перевірила чи докер компос створив необхідін імеджі.
+
+        (Lab_5-QfkFtov1) julia@julia-VirtualBox:~/IdeaProjects/Programming-technologies/Lab_5$ sudo docker images
+        [sudo] пароль до julia: 
+        REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+        juliakut/lab5       compose-tests       1452152ffde8        3 minutes ago       147MB
+        juliakut/lab5       compose-app         3aa3cd3063fb        10 minutes ago      143MB
+        python              3.8-alpine          64df5e2068e3        2 weeks ago         44.5MB
+        redis               alpine              c678242f9116        2 weeks ago         31.6MB
+17) Зупинила проект та почистила усе:
+
+        (Lab_5-QfkFtov1) julia@julia-VirtualBox:~/IdeaProjects/Programming-technologies/Lab_5$ sudo docker-compose down
+        Removing network lab5_secret
+        Removing network lab5_public
+18) Запушила імеджі до репозиторію:
+
+        sudo docker-compose push
+19) На мою думку компос кращий , це новіша технологія , також він простіший у використанні і пришвидшує
+виконання усіх етапів.       
+
+     	         	        
