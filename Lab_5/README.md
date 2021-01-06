@@ -35,9 +35,10 @@
 7) Видалила файли які постворювались після тестового запуску. 
  Створила два Dockerfile та Makefile який допоможе автоматизувати процес розгортання;  
 8) Опис директив мейкфайлу
-   * build - білдить контейнер
-   * network create - створює з'єднання
-   * run - запускає контейнер 
+   * app - білдить контейнер з додатком
+   * tests - білдить контейнер з тестами
+   * run - запускає контейнер та створює нетворк
+   * test-app - запускає контейнер з тестами
    * prune - очищає невикористані контейнери, волюми, з'єднання та імеджі   
 9) Збілдила та запустила сайт і тести.
 
@@ -54,7 +55,19 @@
          test_app.py ....                                                                                                                                                                                                        [100%]
          
          ====================================================================================================== 4 passed in 1.10s ======================================================================================================
-  ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/1.png)
-  ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/2.png)
-  ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/3.png)
-  
+   ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/1.png)
+   ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/2.png)
+   ![alt text](https://raw.githubusercontent.com/JuliaKut/Programming-technologies/main/Lab_5/screenshots/3.png)
+10) Почистила середовище :
+
+        sudo make docker-prune
+11) Створила директиву для того, щоб пушити імеджі:
+
+        push:
+        	@$(foreach state,$(STATES), docker push $(REPO):$(state);)
+12) Створила директиву для автоматизації процесу видалення імеджів: 
+
+        delete:
+        	@sudo docker image rm --force $(shell docker images -q)
+        	        	
+       	        
