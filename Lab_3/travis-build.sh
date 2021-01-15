@@ -1,5 +1,5 @@
 #!/bin/bash
 set -ev
-nohup pipenv run server > ./ci-build.log &
+nohup pipenv runserver > ./ci-build.log &
 pipenv run python3 monitoring.py --once || true
 exit 0
