@@ -13,7 +13,7 @@ jobs:
         - pipenv install
       script: pipenv run pytest tests/tests.py || true
     - stage: "Build Lab 3."
-      name: "Run Djungo Server and test it accessibility. Fail to run and test"
+      name: "Run Djungo Server"
       python: 3.8
       install:
         - cd ./Lab_3/
