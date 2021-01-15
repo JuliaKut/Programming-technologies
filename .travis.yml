@@ -20,7 +20,7 @@ jobs:
         - pipenv install
         - pipenv install requests
         - pipenv install django
-      script: ./scripts/travis-build.sh
+      script: bash ./scripts/travis-build.sh
     - stage: "Build Lab 4."
       name: "Build Docker images & Home task"
       services:
