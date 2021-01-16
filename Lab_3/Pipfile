@@ -13,5 +13,5 @@ requests = "*"
 python_version = "3.8"
 
 [scripts]
-server = "python manage.py runserver 0.0.0.0:8000"
+server = "python3 manage.py runserver"
 monitor = "python3 monitoring.py"
