@@ -29,3 +29,5 @@ def main(url):
 
 if __name__ == '__main__':
     main("http://localhost:8000/health")
+
+return 0
